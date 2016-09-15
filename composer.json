@@ -1,0 +1,11 @@
+{
+  "name": "oxid-esales/eshop-db-views-regenerator",
+  "description": "OXID eShop database views regeneration from console command",
+  "license": "GPL-3.0",
+  "require": {
+    "oxid-esales/eshop-facts": "*"
+  },
+  "bin": [
+    "./oe-eshop-db_views_regenerate"
+  ]
+}
