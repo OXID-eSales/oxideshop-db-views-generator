@@ -14,4 +14,8 @@ if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
     die($message);
 }
 
-echo "it Works!";
+require_once($bootstrapFileName);
+
+$metaDataHandler = oxNew('oxDbMetaDataHandler');
+
+echo ($metaDataHandler->updateViews()?"Done":"Error")."\n";
