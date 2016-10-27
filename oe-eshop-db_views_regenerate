@@ -1,5 +1,7 @@
 #!/usr/bin/env php
 <?php
+use OxidEsales\Eshop\Core\Registry;
+
 $bootstrapFileName = realpath(trim(getenv('ESHOP_BOOTSTRAP_PATH')));
 
 if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
@@ -16,6 +18,13 @@ if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
 
 require_once($bootstrapFileName);
 
+$config = Registry::get('oxConfigFile');
+$config->setVar('aSlaveHosts', null);
+
 $metaDataHandler = oxNew('oxDbMetaDataHandler');
 
-echo ($metaDataHandler->updateViews()?"Done":"Error")."\n";
+if ($metaDataHandler->updateViews()) {
+  echo 1;
+} else {
+  echo 0;
+}
