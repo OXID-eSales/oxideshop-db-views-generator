@@ -23,8 +23,30 @@ $config->setVar('aSlaveHosts', null);
 
 $metaDataHandler = oxNew('oxDbMetaDataHandler');
 
-if ($metaDataHandler->updateViews()) {
-  echo 1;
-} else {
-  echo 0;
+$status = (object)[
+    'updateViews' => false,
+    'noException' => false
+];
+
+function handleExit($status) {
+    if ((!$status->updateViews) || (!$status->noException)) {
+        print("There was an error while regenerating the views.");
+    }
+
+    if (!$status->noException) {
+        print(" Please look at `EXCEPTION_LOG.txt` for more details.\n");
+    }
+
+    if (($status->noException) && (!$status->updateViews)) {
+        print(" Please double check the state of database and configuration.\n");
+    }
+}
+
+register_shutdown_function(handleExit, $status);
+
+$status->updateViews = $metaDataHandler->updateViews();
+$status->noException = true;
+
+if (!$status->updateViews) {
+    exit(2);
 }
