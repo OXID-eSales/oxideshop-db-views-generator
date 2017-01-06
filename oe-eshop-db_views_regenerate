@@ -42,7 +42,7 @@ function handleExit($status) {
     }
 }
 
-register_shutdown_function(handleExit, $status);
+register_shutdown_function('handleExit', $status);
 
 $status->updateViews = $metaDataHandler->updateViews();
 $status->noException = true;
