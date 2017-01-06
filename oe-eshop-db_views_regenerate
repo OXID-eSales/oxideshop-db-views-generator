@@ -2,6 +2,10 @@
 <?php
 use OxidEsales\Eshop\Core\Registry;
 
+set_error_handler(function($errno, $errstr, $errfile, $errline, array $errcontext) {
+    throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
+});
+
 $bootstrapFileName = realpath(trim(getenv('ESHOP_BOOTSTRAP_PATH')));
 
 if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
