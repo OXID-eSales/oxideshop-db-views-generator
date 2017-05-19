@@ -1,16 +1,23 @@
-OXID eShop views regenerator
-============================
+OXID eShop Views Generator
+==========================
 
 This component provides eShop the way of creating/recreating the views structure
-from console command. The script should be accessible through the oe-eshop-facts
-component. Information on how to use ``oe-eshop-db_views_regenerate`` script together
-with ``oe-eshop-facts`` can be found in the following
-`README <https://github.com/OXID-eSales/eshop-facts/blob/master/README.rst>`__.
+from console command. This might be needed after updating OXID eShop version which has a database migration.
 
-Alternative way of running
---------------------------
+Possible ways to use
+--------------------
 
-ESHOP_BOOTSTRAP_PATH='source/bootstrap.php' vendor/bin/oe-eshop-db_views_regenerate
+- Use composer command oe:views:regenerate to generate or regenerate views.
+- Run bash script: ``vendor/bin/oe-eshop-db_views_regenerate``
+- Run PHP script ``vendor/oxid-esales/generate_views.php``
+- Use class ``ViewsGenerator``
+
+**Note:**
+
+  Path to bootstrap might be forced by passing ESHOP_BOOTSTRAP_PATH parameter.
+
+  ESHOP_BOOTSTRAP_PATH='source/bootstrap.php' vendor/bin/oe-eshop-db_views_regenerate
+  ESHOP_BOOTSTRAP_PATH='/var/www/oxideshop/source/bootstrap.php' php oxideshop-db-views-generator/generate_views.php
 
 Possible return error codes
 ---------------------------
