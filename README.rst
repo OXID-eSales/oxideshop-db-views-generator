@@ -7,8 +7,7 @@ from console command. This might be needed after updating OXID eShop version whi
 Possible ways to use
 --------------------
 
-- Use composer command oe:views:regenerate to generate or regenerate views.
-- Run bash script: ``vendor/bin/oe-eshop-db_views_regenerate``
+- Run bash script: ``vendor/bin/oe-eshop-db_views_generate``
 - Run PHP script ``vendor/oxid-esales/generate_views.php``
 - Use class ``ViewsGenerator``
 
@@ -16,7 +15,7 @@ Possible ways to use
 
   Path to bootstrap might be forced by passing ESHOP_BOOTSTRAP_PATH parameter.
 
-  ESHOP_BOOTSTRAP_PATH='source/bootstrap.php' vendor/bin/oe-eshop-db_views_regenerate
+  ESHOP_BOOTSTRAP_PATH='source/bootstrap.php' vendor/bin/oe-eshop-db_views_generate
   ESHOP_BOOTSTRAP_PATH='/var/www/oxideshop/source/bootstrap.php' php oxideshop-db-views-generator/generate_views.php
 
 Possible return error codes

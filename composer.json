@@ -3,6 +3,7 @@
   "description": "OXID eShop database views regeneration from console command",
   "license": "GPL-3.0",
   "bin": [
-    "./oe-eshop-db_views_regenerate"
+    "./oe-eshop-db_views_regenerate",
+    "./oe-eshop-db_views_generate"
   ]
 }
