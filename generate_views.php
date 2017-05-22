@@ -19,7 +19,7 @@
  * @copyright (C) OXID eSales AG 2003-2017
  */
 
-namespace OxidEsales\Database;
+namespace OxidEsales\DatabaseViewsGenerator;
 
 $bootstrapFileName = getenv('ESHOP_BOOTSTRAP_PATH');
 if (!empty($bootstrapFileName)) {
@@ -53,7 +53,7 @@ if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
 require_once($bootstrapFileName);
 require_once('ViewsGenerator.php');
 
-$ViewsGenerator = new \OxidEsales\Database\ViewsGenerator();
+$ViewsGenerator = new \OxidEsales\DatabaseViewsGenerator\ViewsGenerator();
 
 $status = (object)[
     'updateViews' => false,
@@ -74,7 +74,7 @@ function handleExit($status) {
     }
 }
 
-register_shutdown_function('OxidEsales\Database\handleExit', $status);
+register_shutdown_function('OxidEsales\DatabaseViewsGenerator\handleExit', $status);
 
 $status->updateViews = $ViewsGenerator->generate();
 $status->noException = true;

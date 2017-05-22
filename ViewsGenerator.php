@@ -19,7 +19,7 @@
  * @copyright (C) OXID eSales AG 2003-2017
  */
 
-namespace OxidEsales\Database;
+namespace OxidEsales\DatabaseViewsGenerator;
 
 class ViewsGenerator
 {
