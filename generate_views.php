@@ -21,6 +21,8 @@
 
 namespace OxidEsales\DatabaseViewsGenerator;
 
+use OxidEsales\DatabaseViewsGenerator\ViewsGenerator;
+
 $bootstrapFileName = getenv('ESHOP_BOOTSTRAP_PATH');
 if (!empty($bootstrapFileName)) {
     $bootstrapFileName = realpath(trim(getenv('ESHOP_BOOTSTRAP_PATH')));
@@ -51,9 +53,8 @@ if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
 }
 
 require_once($bootstrapFileName);
-require_once('ViewsGenerator.php');
 
-$ViewsGenerator = new \OxidEsales\DatabaseViewsGenerator\ViewsGenerator();
+$ViewsGenerator = new ViewsGenerator();
 
 $status = (object)[
     'updateViews' => false,

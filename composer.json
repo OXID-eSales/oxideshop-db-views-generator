@@ -5,5 +5,8 @@
   "bin": [
     "./oe-eshop-db_views_regenerate",
     "./oe-eshop-db_views_generate"
-  ]
+  ],
+  "autoload": {
+    "psr-4": {"OxidEsales\\DatabaseViewsGenerator\\": "src"}
+  }
 }
