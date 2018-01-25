@@ -1,7 +1,7 @@
 {
   "name": "oxid-esales/oxideshop-db-views-generator",
   "description": "OXID eShop database views regeneration from console command",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "bin": [
     "./oe-eshop-db_views_regenerate",
     "./oe-eshop-db_views_generate"
