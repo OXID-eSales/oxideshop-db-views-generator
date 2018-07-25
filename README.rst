@@ -26,3 +26,8 @@ After the execution of script it will return one of the following return error c
 * ``0`` - If the execution went without errors;
 * ``1`` - If an exception was thrown and details are stored in ``EXCEPTION_LOG.txt`` file;
 * ``2`` - If an unknown error has been thrown and no details are available.
+
+Bugs and Issues
+---------------
+
+If you experience any bugs or issues, please report them in the section **OXID eShop (all versions)** of https://bugs.oxid-esales.com.
