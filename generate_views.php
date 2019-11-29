@@ -67,7 +67,7 @@ function handleExit($status) {
     }
 
     if (!$status->noException) {
-        print(" Please look at `EXCEPTION_LOG.txt` for more details.\n");
+        print(" Please look at `oxideshop.log` for more details.\n");
     }
 
     if (($status->noException) && (!$status->updateViews)) {
