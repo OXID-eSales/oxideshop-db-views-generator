@@ -1,4 +1,0 @@
-#!/usr/bin/env php
-<?php
-// @deprecated oe-eshop-db_views_regenerate script should NOT be used, use oe-eshop-db_views_generate instead.
-require_once('generate_views.php');
