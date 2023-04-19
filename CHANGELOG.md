@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v2.1.0] - 2023-04-19
+
+### Changed
+
+- License updated 
+
 ## [v2.0.0] - 2021-06-09
 
 ### Removed
@@ -21,5 +27,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix error file name to ``oxideshop.log`` [PR-1](https://github.com/OXID-eSales/oxideshop-db-views-generator/pull/1)
 
+[v2.1.0]: https://github.com/OXID-eSales/oxideshop-db-views-generator/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/OXID-eSales/oxideshop-db-views-generator/compare/v1.3.0...v2.0.0
 [v1.3.0]: https://github.com/OXID-eSales/oxideshop-db-views-generator/compare/v1.2.0...v1.3.0
