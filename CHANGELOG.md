@@ -1,5 +1,11 @@
 # Change Log for OXID eShop Views Generator
 
+## v2.2.0 - 2024-03-14
+
+### Changed
+
+- License updated
+
 ## v2.1.0 - 2023-04-19
 
 ### Changed
