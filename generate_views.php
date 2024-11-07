@@ -5,6 +5,8 @@
  * See LICENSE file for license details.
  */
 
+declare(strict_types=1);
+
 namespace OxidEsales\DatabaseViewsGenerator;
 
 $bootstrapFileName = getenv('ESHOP_BOOTSTRAP_PATH');
@@ -26,12 +28,12 @@ if (!empty($bootstrapFileName)) {
 
 if (!(file_exists($bootstrapFileName) && !is_dir($bootstrapFileName))) {
     $items = [
-        "Unable to find eShop bootstrap.php file.",
-        "You can override the path by using ESHOP_BOOTSTRAP_PATH environment variable.",
+        'Unable to find eShop bootstrap.php file.',
+        'You can override the path by using ESHOP_BOOTSTRAP_PATH environment variable.',
         "\n"
     ];
 
-    $message = implode(" ", $items);
+    $message = implode(' ', $items);
 
     die($message);
 }
@@ -45,9 +47,10 @@ $status = (object)[
     'noException' => false
 ];
 
-function handleExit($status) {
+function handleExit($status)
+{
     if ((!$status->updateViews) || (!$status->noException)) {
-        print("There was an error while regenerating the views.");
+        print('There was an error while regenerating the views.');
     }
 
     if (!$status->noException) {

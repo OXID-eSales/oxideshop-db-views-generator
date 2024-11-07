@@ -5,6 +5,8 @@
  * See LICENSE file for license details.
  */
 
+declare(strict_types=1);
+
 namespace OxidEsales\DatabaseViewsGenerator;
 
 use OxidEsales\Eshop\Core\DbMetaDataHandler;
@@ -16,8 +18,6 @@ class ViewsGenerator
      */
     public function generate()
     {
-        $metaDataHandler = oxNew(DbMetaDataHandler::class);
-
-        return $metaDataHandler->updateViews();
+        return oxNew(DbMetaDataHandler::class)->updateViews();
     }
 }
