@@ -1,5 +1,10 @@
 # Change Log for OXID eShop Views Generator
 
+## v3.0.0-alpha.1 - 2025-02-03
+
+### Removed
+- Remove slave hosts config option
+
 ## v2.2.0 - 2024-03-14
 
 ### Changed
